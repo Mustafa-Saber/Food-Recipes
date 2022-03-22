@@ -1,0 +1,94 @@
+$white: white;
+$mainColor: #dc143c;
+section {
+  .recipe {
+    background-color: rgb(19, 18, 18, 0.6);
+    margin: 1em 0.5em;
+    padding: 0.3em 2em;
+    color: $white;
+    display: flex;
+    justify-content: flex-start;
+    .rec-img {
+      width: 340px;
+      height: 200px;
+      overflow: hidden;
+      padding-right: 1em;
+      img {
+        width: 100%;
+        height: 100%;
+        transition: 0.3s;
+      }
+    }
+    .caption {
+      h4 {
+        white-space: nowrap;
+        transition: 0.3s;
+      }
+      h5 {
+        transition: 0.3s;
+
+        a {
+          text-decoration: none;
+        }
+      }
+      i {
+        color: yellow;
+      }
+      .btn-recupe {
+        padding: 0.5em 1em;
+        border: 0.1em solid $mainColor;
+        border-radius: 5px;
+        color: $mainColor;
+        margin: 0.5em 0;
+        text-decoration: none;
+        transition: 0.5s;
+        &:hover {
+          background: $mainColor;
+          color: $white;
+        }
+      }
+    }
+    &:hover img {
+      transform: scale(1.1);
+    }
+    &:hover h4,
+    &:hover h5 {
+      color: $mainColor;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  section {
+    .recipe {
+      .rec-img {
+        width: 250px !important;
+        height: 150px;
+        overflow: hidden;
+        padding-right: 1em;
+        img {
+          width: 100%;
+          height: 100%;
+          transition: 0.3s;
+        }
+      }
+      .caption {
+        h4 {
+          font-size: 1em;
+        }
+        h5 {
+          font-size: 0.88em;
+        }
+        i {
+          padding-right: 0.3em;
+          font-size: 0.6em;
+        }
+        .btn-recupe {
+          white-space: nowrap;
+          padding: 0.25em 0.5em;
+          font-size: 0.85em;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<section>
+  <div class="container">
+    <div class="" *ngFor="let recipe of foodRecipe">
+      <div class="recipe">
+        <div class="rec-img">
+          <a [href]="recipe.source_url" target="_blink">
+            <img [src]="recipe.image_url" [alt]="recipe.publisher" />
+          </a>
+        </div>
+        <div class="caption">
+          <h4>{{ recipe.title.split(" ").slice(0, 2).join(" ") }}</h4>
+          <h5>
+            Recipe By/
+            <a [href]="recipe.publisher_url" target="_blink">
+              {{ recipe.publisher }}
+            </a>
+          </h5>
+          <p>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </p>
+          <a class="btn-recupe" [href]="recipe.source_url" target="_blink"
+            >get the recipe</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

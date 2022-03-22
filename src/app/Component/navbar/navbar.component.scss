@@ -1,0 +1,64 @@
+nav {
+  padding: 0.5em;
+  position: absolute;
+  width: 100%;
+  z-index: 99999999;
+
+  img {
+    width: 75%;
+  }
+
+  .input-group {
+    display: flex;
+    width: 75%;
+    position: absolute;
+    margin: 3em 0;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    transition: 0.2s;
+  }
+  ul {
+    padding: 0 2em;
+    li {
+      text-align: center;
+      margin-top: 3em;
+      transition: 0.2s;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  nav {
+    .input-group {
+      position: static;
+      transform: translate(20px);
+      margin: 0;
+      width: 50%;
+    }
+
+    ul {
+      padding: 0;
+      li {
+        margin-top: 0;
+        button {
+          margin-top: 0.1em;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-wsidth: 992px) {
+  nav {
+    .input-group {
+      transform: translate(70px);
+    }
+  }
+}
+@media only screen and (min-width: 1200px) {
+  nav {
+    .input-group {
+      transform: translate(180px) !important;
+    }
+  }
+}

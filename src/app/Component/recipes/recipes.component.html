@@ -1,0 +1,16 @@
+<section>
+  <div class="nav-tabs">
+    <h4>{{ rec }} Recipes</h4>
+    <div class="btn-group">
+      <button (click)="gridView()">
+        <span>grid</span> <i class="fas fa-th"></i>
+      </button>
+      <button (click)="listView()">
+        <span>list</span> <i class="fas fa-th-list"></i>
+      </button>
+    </div>
+  </div>
+
+  <app-grid *ngIf="grid"></app-grid>
+  <app-list *ngIf="list"></app-list>
+</section>

@@ -1,0 +1,12 @@
+<section>
+  <div class="home-features text-center">
+    <div class="my-4"><h1>1,000,000 Recipes & More In One Place</h1></div>
+    <h4>You Never Have To Cook Boring Again</h4>
+    <div class="features">
+      <div class="feature" *ngFor="let feature of features">
+        <i [class]="feature.icon"></i>
+        <p>{{ feature.feature }}</p>
+      </div>
+    </div>
+  </div>
+</section>

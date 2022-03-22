@@ -1,0 +1,227 @@
+<section class="pt-5">
+  <div class="bg-opacity-10 bg-black m-auto parent">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <form [formGroup]="login" (submit)="getLogin()">
+          <h1>Log - in</h1>
+
+          <div>
+            <label for="email">email</label>
+            <input
+              type="email"
+              name="name"
+              id="email"
+              class="form-control"
+              formControlName="email"
+            />
+            <div
+              class="alert alert-danger py-1"
+              *ngIf="
+                login.get('email')?.errors != null &&
+                login.get('email')?.touched
+              "
+            >
+              <p *ngIf="login.get('email')?.errors?.['required']">
+                email required
+              </p>
+              <p *ngIf="login.get('email')?.errors?.['email']">
+                email is valid
+              </p>
+            </div>
+          </div>
+          <div>
+            <label for="password">password</label>
+            <input
+              type="password"
+              name="name"
+              id="password"
+              class="form-control"
+              formControlName="password"
+            />
+            <div
+              class="alert alert-danger py-1"
+              *ngIf="
+                login.get('password')?.errors != null &&
+                login.get('password')?.touched
+              "
+            >
+              <p *ngIf="login.get('password')?.errors?.['required']">
+                password required
+              </p>
+              <p *ngIf="login.get('password')?.errors?.['minlength']">
+                passowrd minLength is 8
+              </p>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <button
+              [ngStyle]="{
+                'background-color': login.invalid ? 'grey' : '#0F8BA7',
+                border: login.invalid ? 'grey' : '0F8BA7'
+              }"
+              [disabled]="login.invalid"
+              class="btn btn-info mt-3 w-25 ms-lg-auto"
+              type="submit"
+            >
+              <span *ngIf="!isWating">Login</span>
+              <span *ngIf="isWating"> wating</span>
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <form [formGroup]="Register" (submit)="getData()">
+          <h1>Register</h1>
+          <div>
+            <label for="first_name">first name</label>
+            <input
+              type="text"
+              name="name"
+              id="first_name"
+              class="form-control"
+              formControlName="first_name"
+            />
+            <div
+              class="alert alert-danger py-1"
+              *ngIf="
+                Register.get('first_name')?.errors != null &&
+                Register.get('first_name')?.touched
+              "
+            >
+              <p *ngIf="Register.get('first_name')?.errors?.['required']">
+                first Name required
+              </p>
+              <p *ngIf="Register.get('first_name')?.errors?.['minlength']">
+                first Name minLength is 4
+              </p>
+            </div>
+          </div>
+          <div>
+            <label for="last_name">last name</label>
+            <input
+              type="text"
+              name="name"
+              id="last_name"
+              class="form-control"
+              formControlName="last_name"
+            />
+            <div
+              class="alert alert-danger py-1"
+              *ngIf="
+                Register.get('last_name')?.errors != null &&
+                Register.get('last_name')?.touched
+              "
+            >
+              <p *ngIf="Register.get('last_name')?.errors?.['required']">
+                last Name required
+              </p>
+              <p *ngIf="Register.get('last_name')?.errors?.['minlength']">
+                last Name minLength is 4
+              </p>
+            </div>
+          </div>
+          <div>
+            <label for="email">email</label>
+            <input
+              type="email"
+              name="name"
+              id="email"
+              class="form-control"
+              formControlName="email"
+            />
+            <div
+              class="alert alert-danger py-1"
+              *ngIf="
+                Register.get('email')?.errors != null &&
+                Register.get('email')?.touched
+              "
+            >
+              <p *ngIf="Register.get('email')?.errors?.['required']">
+                email required
+              </p>
+              <p *ngIf="Register.get('email')?.errors?.['email']">
+                email is valid
+              </p>
+            </div>
+          </div>
+          <div>
+            <label for="password">password</label>
+            <input
+              type="password"
+              name="name"
+              id="password"
+              class="form-control"
+              formControlName="password"
+            />
+            <div
+              class="alert alert-danger py-1"
+              *ngIf="
+                Register.get('password')?.errors != null &&
+                Register.get('password')?.touched
+              "
+            >
+              <p *ngIf="Register.get('password')?.errors?.['required']">
+                password required
+              </p>
+              <p *ngIf="Register.get('password')?.errors?.['minlength']">
+                passowrd minLength is 8
+              </p>
+            </div>
+          </div>
+          <div>
+            <label for="age">age</label>
+            <input
+              type="number"
+              name="name"
+              id="age"
+              class="form-control"
+              formControlName="age"
+            />
+            <div
+              class="alert alert-danger py-1"
+              *ngIf="
+                Register.get('age')?.errors != null &&
+                Register.get('age')?.touched
+              "
+            >
+              <p *ngIf="Register.get('age')?.errors?.['required']">
+                age required
+              </p>
+              <p *ngIf="Register.get('age')?.errors?.['min']">age min is 16</p>
+              <p *ngIf="Register.get('age')?.errors?.['max']">age min is 80</p>
+            </div>
+          </div>
+          <div class="text-center">
+            <button
+              [ngStyle]="{
+                'background-color': Register.invalid ? 'grey' : '#0F8BA7',
+                border: Register.invalid ? 'grey' : '0F8BA7'
+              }"
+              [disabled]="Register.invalid"
+              class="btn btn-info mt-3 w-25 ms-lg-auto"
+              type="submit"
+            >
+              <span *ngIf="!isWating">register</span>
+              <span *ngIf="isWating"> wating</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="layout go-register" (click)="callSign()">
+      <p *ngIf="isSuccess" class="alert alert-success">{{ isSuccess }}</p>
+      <div class="text-center" *ngIf="isrgs">
+        <h2>hello chef ,</h2>
+        <p>Register and save all your favourtie recipes for ever with us</p>
+        <button class="btn-layout">Register</button>
+      </div>
+      <div class="text-center" *ngIf="!isrgs">
+        <h2>Welcome Back,</h2>
+        <p>Login to see all your favourite recipes</p>
+        <button class="btn-layout">login</button>
+      </div>
+    </div>
+  </div>
+</section>

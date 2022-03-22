@@ -1,0 +1,112 @@
+$mainColor: #dc143c;
+$white: white;
+section {
+  padding: 5em 0;
+  .recipe {
+    padding: 0 1em 0;
+    background-color: rgba(34, 31, 31, 0.6);
+    margin: 1em 0;
+    overflow: hidden;
+    .rec-img {
+      padding: 7px;
+      height: 400px;
+      max-height: 400px;
+      overflow: hidden;
+      margin-bottom: 12px;
+
+      img {
+        width: 100;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.5s;
+        border-radius: 4px;
+      }
+    }
+
+    .caption {
+      padding: 1em 0.5em;
+      text-align: center;
+      h4 {
+        padding: 0.5em 0;
+        color: $white;
+        white-space: nowrap;
+        transition: 0.3s;
+      }
+      h5 {
+        color: $white;
+        transition: 0.3s;
+        a {
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      p {
+        color: yellow;
+        i {
+          padding-left: 0.4em;
+        }
+      }
+      .btn-recupe {
+        padding: 0.5em 1em;
+        border: 0.1em solid $mainColor;
+        border-radius: 5px;
+        text-decoration: none;
+        color: $mainColor;
+        margin: 0.5em 0;
+        transition: 0.5s;
+        &:hover {
+          background: $mainColor;
+          color: $white;
+        }
+      }
+    }
+    &:hover img {
+      transform: scale(1.1);
+    }
+    &:hover h5,
+    &:hover h4 {
+      color: $mainColor !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  section {
+    .recipe {
+      padding: 0;
+
+      .rec-img {
+        width: 350px !important;
+        height: 200px;
+        overflow: hidden;
+        padding-right: 1em;
+        img {
+          width: 100%;
+          height: 100%;
+          transition: 0.3s;
+        }
+      }
+      .caption {
+        padding: 0.2em 0 0.5em;
+
+        h4 {
+          font-size: 1em;
+        }
+        h5 {
+          font-size: 0.88em;
+        }
+        i {
+          padding-right: 0.3em;
+          font-size: 0.6em;
+        }
+        .btn-recupe {
+          white-space: nowrap;
+          padding: 0.25em 0.5em;
+          font-size: 0.85em;
+        }
+      }
+    }
+  }
+}

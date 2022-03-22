@@ -1,0 +1,82 @@
+$mian-color: #bb2d3b;
+section {
+  .parent {
+    width: 50%;
+    padding: 4em 2em 0;
+    border-radius: 5px;
+    position: relative;
+    .row {
+      align-items: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 1em 0;
+      h1 {
+        text-align: center;
+      }
+    }
+    .layout {
+      background: $mian-color;
+      border-radius: 5px;
+      transition: 1s;
+      position: absolute;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2em;
+      align-items: center;
+      h2 {
+        font-size: 2.5em;
+        text-transform: capitalize;
+      }
+      p {
+        text-align: center;
+        font-size: 1.2em;
+      }
+      .btn-layout {
+        padding: 0.3em 0.8em;
+        border-radius: 7px;
+        border: 2px solid transparent;
+        transition: 0.3s;
+        &:hover {
+          background-image: linear-gradient(
+            to right,
+            #fc6076,
+            #ff9a44,
+            #ef9d43,
+            #e75516
+          );
+
+          color: white;
+        }
+      }
+    }
+    .go-register {
+      inset: 0 0 0 50%;
+    }
+    .go-login {
+      inset: 0 50% 0 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  section {
+    padding-top: 10em !important;
+    .parent {
+      width: 95%;
+      padding: 0.5em 0.3em !important;
+
+      .go-register {
+        inset: 0 0 65% 0 !important;
+      }
+      .go-login {
+        inset: 38% 0 0 0 !important;
+      }
+    }
+  }
+}

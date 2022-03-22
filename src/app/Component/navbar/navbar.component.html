@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"
+      ><img src="../../../assets/logoo.png" alt="logo page"
+    /></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- <p
+      class="alert alert-danger p-0"
+      *ngIf="recipeInp?.errors?.['required'] && recipeInp?.touched"
+    >
+      search type Required
+    </p> -->
+    <div class="input-group">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search over one million recipes..."
+        aria-label="Recipient's username"
+        aria-describedby="button-addon2"
+        [formControl]="recipeInp"
+        (keyup.enter)="updateRecipe()"
+      />
+
+      <button
+        class="btn btn-danger"
+        type="button"
+        id="button-addon2"
+        (click)="updateRecipe()"
+      >
+        Search
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <button class="btn btn-danger" routerLink="/login">
+            login <i class="fas fa-sign-in-alt"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
