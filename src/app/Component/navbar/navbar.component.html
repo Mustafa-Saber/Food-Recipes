@@ -1,8 +1,10 @@
 <nav class="navbar navbar-expand-md navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"
-      ><img src="../../../assets/logoo.png" alt="logo page"
-    /></a>
+    <a class="navbar-brand" routerLink="/home">
+      <!-- <img src="../../../assets/logoo.png" alt="logo page" /> -->
+
+      <!-- <img src="./../../.././assets/logoo.png" alt="logo-test" /> -->
+    </a>
     <button
       class="navbar-toggler"
       type="button"
@@ -14,14 +16,9 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <!-- <p
-      class="alert alert-danger p-0"
-      *ngIf="recipeInp?.errors?.['required'] && recipeInp?.touched"
-    >
-      search type Required
-    </p> -->
+
     <div class="input-group">
-      <input
+      <!-- <input
         type="text"
         class="form-control"
         placeholder="Search over one million recipes..."
@@ -29,8 +26,18 @@
         aria-describedby="button-addon2"
         [formControl]="recipeInp"
         (keyup.enter)="updateRecipe()"
-      />
-
+      /> -->
+      <select
+        class="form-control"
+        id="exampleFormControlSelect1"
+        aria-label="Recipient's username"
+        aria-describedby="button-addon2"
+        placeholder="Search over one million recipes..."
+        [formControl]="recipeInp"
+        (keyup.enter)="updateRecipe()"
+      >
+        <option *ngFor="let rec of select">{{ rec }}</option>
+      </select>
       <button
         class="btn btn-danger"
         type="button"
@@ -43,7 +50,7 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
+        <li class="nav-item" (click)="clickNav()">
           <button class="btn btn-danger" routerLink="/login">
             login <i class="fas fa-sign-in-alt"></i>
           </button>

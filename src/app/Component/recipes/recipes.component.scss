@@ -11,14 +11,17 @@ section {
   .nav-tabs {
     height: 70%;
     display: flex;
+    flex-direction: column !important;
     align-items: center;
-    justify-content: space-between;
     margin: 5em 1em 0;
+    transition: 0.15s;
     h4 {
       color: white;
       background-color: $main-color;
       padding: 0.3em 0.7em;
       border-radius: 0.2em;
+      font-size: 1em;
+      transition: 0.15s;
     }
 
     button {
@@ -52,6 +55,22 @@ section {
         background-color: #000;
         opacity: 0.6;
         margin-bottom: 1.2em;
+      }
+    }
+  }
+}
+@media only screen and(min-width:768px) {
+  section {
+    .nav-tabs {
+      height: 70%;
+      display: flex;
+      flex-direction: row !important;
+      align-items: center;
+      justify-content: space-between;
+
+      margin: 5em 1em 0;
+      h4 {
+        font-size: 1.5em;
       }
     }
   }

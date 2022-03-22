@@ -1,14 +1,26 @@
 section {
-  background: url(../../../assets/notFound.png) no-repeat;
-  background-size: contain;
-  background-position: center;
+  // background: url(../../../assets/404.jpg) no-repeat;
+  // background-size: cover;
+  // background-position: center;
   height: 100vh;
-  width: 100%;
+  // width: 100%;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 
   .btn {
-    margin-top: 50px;
+    // margin-bottom: 50px;
+    text-transform: capitalize;
+    // padding: 0.5em 1em;
+    i {
+      // padding-left: 0.4em;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  section {
+    justify-content: end;
   }
 }

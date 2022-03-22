@@ -61,11 +61,11 @@ section {
 @media only screen and (max-width: 768px) {
   section {
     .recipe {
+      padding: 0;
       .rec-img {
-        width: 250px !important;
-        height: 150px;
+        width: 100px !important;
+        height: 150px !important;
         overflow: hidden;
-        padding-right: 1em;
         img {
           width: 100%;
           height: 100%;

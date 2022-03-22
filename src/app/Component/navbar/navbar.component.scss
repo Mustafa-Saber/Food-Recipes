@@ -3,6 +3,14 @@ nav {
   position: absolute;
   width: 100%;
   z-index: 99999999;
+  .navbar-brand {
+    background: url(../../../assets/logoo.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 10%;
+    height: 20%;
+    padding: 1em 4em;
+  } // height: 10%;
 
   img {
     width: 75%;
@@ -12,7 +20,7 @@ nav {
     display: flex;
     width: 75%;
     position: absolute;
-    margin: 3em 0;
+    margin: 1em 0;
     top: 100%;
     left: 50%;
     transform: translate(-50%);
