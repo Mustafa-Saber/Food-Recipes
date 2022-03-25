@@ -41,6 +41,7 @@
         [formControl]="recipeInp"
         (keyup.enter)="updateRecipe()"
       >
+        <option></option>
         <option *ngFor="let rec of select">{{ rec }}</option>
       </select>
       <button

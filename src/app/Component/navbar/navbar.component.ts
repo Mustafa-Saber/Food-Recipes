@@ -148,5 +148,6 @@ export class NavbarComponent implements OnInit {
     'pepperoni',
     'salami',
     'ribs',
-  ].sort();
+  ];
+  // .sort();
 }
